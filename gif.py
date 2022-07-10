@@ -264,8 +264,8 @@ if choose == "Órbita de corpos celestes":
 elif choose == "Órbitas de raios de luz":
     st.title("Luz orbitando um buraco negro")
     st.write("A teoria da relatividade geral de Einstein prevê que a trajetória da luz deve ser defletida quando passa nas vizinhanças de um corpo massivo. O protótipo de simulador abaixo nos permite explorar a órbita raios de luz ao redor de um buraco negro com a mesma massa do Sol.")
-    image = Image.open(r'C:/Users/isabe/.streamlit/orbitaluz.png')
-    st.image(image)
+    image2 = Image.open('orbitaluz.png')
+    st.image(image2)
     st.write("Nele, você pode alterar (ver figura acima):")
     st.write("* O parâmetro de impacto (em km): $d$")
     st.write("Ex.: Por volta de  $d$=7.794km , temos um valor crítico para o parâmetro de impacto. No simulador abaixo, você pode testar esse e outros parâmetros.")
