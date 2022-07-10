@@ -1,0 +1,9 @@
+streamlit==1.7.0
+IPython==8.1.1
+Image==1.5.33
+streamlit-option-menu==0.3.2
+numpy==1.22.3
+matplotlib==3.5.1
+sympy==1.10
+scipy==1.8.0
+hydralit-components==1.0.9
