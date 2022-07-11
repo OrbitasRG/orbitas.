@@ -24,7 +24,7 @@ st.set_page_config(
 #st.sidebar.image(image1,use_column_width='always')
 #pagina_selecionada = st.sidebar.selectbox("Selecione um tipo de órbita", ['Óbita de corpos celestes', 'Órbitas de raios de luz'])
 
-choose = option_menu(menu_title=None, options=["Órbita de corpos celestes","Corpos Massivos", "Órbitas de raios de luz"],icons = ["box","brightness-high"], default_index=0, orientation='horizontal',
+choose = option_menu(menu_title=None, options=["Órbita de corpos celestes", "Órbitas de raios de luz"],icons = ["box","brightness-high"], default_index=0, orientation='horizontal',
 )
 
 #hide_menu_style = """
