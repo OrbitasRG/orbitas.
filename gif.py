@@ -22,10 +22,10 @@ st.set_page_config(
 #image1 = Image.open(r'C:/Users/isabe/.streamlit/titulo11.png')
 #st.image(image1,use_column_width='always') 
 #st.sidebar.image(image1,use_column_width='always')
-#pagina_selecionada = st.sidebar.selectbox("Selecione um tipo de órbita", ['Óbita de corpos celestes', 'Órbita de raios de luz'])
+#pagina_selecionada = st.sidebar.selectbox("Selecione um tipo de órbita", ['Óbita de corpos celestes', 'Órbitas de raios de luz'])
 
-choose = option_menu("Órbitas Relativisticas",["Órbita de corpos celestes","Órbitas de raios de luz"],icons = ['cursor', 'cursor'], menu_icon='app-indicator', default_index=0, orientation='horizontal',styles={"container":{"padding": "5!important", "background-color": "#000000"},'icon':{'color': "#fafafa",'font-size': "25px"}, 'nav-link':{"font-size": "25px","text-align": "left", "margin":"0px", "--hover-color": "#000000",'color':'#fafafa'},
-        "nav-link-selected": {'color':'000000',"background-color": "#fafafa"}})
+choose = option_menu(menu_title=None, options=["Órbita de corpos celestes","Corpos Massivos", "Órbitas de raios de luz"],icons = ["box","brightness-high"], default_index=0, orientation='horizontal',
+)
 
 #hide_menu_style = """
  #       <style>
