@@ -14,7 +14,10 @@ from streamlit_option_menu import option_menu
 import streamlit.components.v1 as components 
 
 
-#st.set_page_config(page_title="Órbitas Relativísticas", page_icon=":comet:")
+st.set_page_config(
+     page_title="Órbitas Relativisticas",
+     page_icon=":dizzy:"
+) 
 
 #image1 = Image.open(r'C:/Users/isabe/.streamlit/titulo11.png')
 #st.image(image1,use_column_width='always') 
