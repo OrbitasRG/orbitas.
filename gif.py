@@ -38,18 +38,18 @@ choose = option_menu(menu_title=None, options=["Órbita de corpos celestes", "Ó
 if choose == "Órbita de corpos celestes":
     st.title("Corpo celeste orbitando um buraco negro")
     st.write("E se, de repente, o Sol se transformasse em um buraco negro?")
-    st.write("Para isso, toda sua massa, de 2 $\cdot$ 10$^{30}$ kg (hoje espalhada numa esfera com cerca de  700.000 km de raio), deveria ser comprimida numa região com raio de cerca de  3  km.")
+    st.write("Para isso, toda sua massa, de 2 $\cdot$ 10$^{30}$ kg (hoje espalhada numa esfera com cerca de  700 mil quilômetros de raio), deveria ser comprimida numa região com raio de cerca de  3  km.")
     image = Image.open('orbitaceleste.png')
     st.image(image)
-    st.write("O protótipo de simulador abaixo nos permite explorar a órbita de corpos (planetas, asteroides ou espaço-naves) que se aventurassem nas vizinhanças de um buraco negro com a mesma massa do Sol.")
+    st.write("O simulador abaixo nos permite explorar a órbita de corpos (planetas, asteroides ou espaço-naves) que se aventurassem nas vizinhanças de um buraco negro com a mesma massa do Sol.")
     st.write("Nele você pode alterar (ver figura acima):")
-    st.write("* A posição inicial do corpo (em km): $x_0$")
+    st.write("* A posição inicial do corpo: $x_0$ (em km)")
     st.write("* O módulo da velocidade inicial do corpo: $v_0$")
-    st.write("Ex.: Com $x_0$=15km e $v_0$=0.38c, obtemos uma órbita circular. No simulador abaixo, você pode testar esse e outros parâmetros.")
+    st.write("Ex.: Com $x_0=15$km e $v_0=0.38c$, obtemos uma órbita quase circular. No simulador abaixo, você pode testar esse e outros parâmetros!")
     st.subheader("Escolha o valor da posição inicial (em km):")   
-    x0 = st.slider("Escolha entre 3km e 30km",min_value=3.0, max_value=30.0, step = 0.1)   
-    st.subheader("Escolha o valor da velocidade inicial (em múltiplos da velocidade da luz):")   
-    v0 = st.slider("Escolha 0.01 e 1",min_value=0.01, max_value=1.0, step = 0.01)
+    x0 = st.slider("Escolha entre 3km e 30km:",min_value=3.0, max_value=30.0, step = 0.1)   
+    st.subheader("Escolha o valor da velocidade inicial (em unidades da velocidade da luz):")   
+    v0 = st.slider("Escolha entre 0.01 e 1:",min_value=0.01, max_value=1.0, step = 0.01)
     result = st.button("Start")
 
     if result:
@@ -266,14 +266,14 @@ if choose == "Órbita de corpos celestes":
 
 elif choose == "Órbitas de raios de luz":
     st.title("Luz orbitando um buraco negro")
-    st.write("A teoria da relatividade geral de Einstein prevê que a trajetória da luz deve ser defletida quando passa nas vizinhanças de um corpo massivo. O protótipo de simulador abaixo nos permite explorar a órbita raios de luz ao redor de um buraco negro com a mesma massa do Sol.")
+    st.write("A teoria da Relatividade Geral de Einstein prevê que a trajetória da luz deve ser defletida quando passa nas vizinhanças de um corpo massivo. O simulador abaixo nos permite explorar a órbita de raios de luz ao redor de um buraco negro com a mesma massa do Sol.")
     image2 = Image.open('orbitaluz.png')
     st.image(image2)
     st.write("Nele, você pode alterar (ver figura acima):")
     st.write("* O parâmetro de impacto (em km): $d$")
-    st.write("Ex.: Por volta de  $d$=7.794km , temos um valor crítico para o parâmetro de impacto. No simulador abaixo, você pode testar esse e outros parâmetros.")
-    st.subheader("Escolha o valor do parâmetro de impacto  d (em km):")   
-    v0 = st.slider("Escolha entre 0.01 e 15",min_value=0.01, max_value=15.0, step = 0.01) #MUDAR
+    st.write("Ex.: Por volta de  $d=7.794$km, temos o valor crítico para o parâmetro de impacto. No simulador abaixo, você pode testar esse e outros parâmetros!")
+    st.subheader("Escolha o valor do parâmetro de impacto $d$ (em km):")   
+    v0 = st.slider("Escolha entre 0.01 e 15:",min_value=0.01, max_value=15.0, step = 0.01) #MUDAR
     result = st.button("Start")
 
     if result:  
