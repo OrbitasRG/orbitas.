@@ -253,7 +253,7 @@ if choose == "Órbita de corpos celestes":
             #time.sleep(0.01)
         
         ani1 = animation.FuncAnimation(fig, animate, frames=range(0,len(x),skipframes), interval=30, blit = True, repeat = False)
-        components.html(ani1.to_jshtml(), height=500)
+        components.html(ani1.to_jshtml(), height=800)
 
         #ani1 = FuncAnimation(fig, animate, frames=range(0,len(x),skipframes), interval=30, blit = True, repeat = False)
         
@@ -432,4 +432,4 @@ elif choose == "Órbitas de raios de luz":
 
         ani2 = animation.FuncAnimation(fig, animate, frames=range(0,len(x),skipframes), interval=10, blit = True, repeat = False)
 
-        components.html(ani2.to_jshtml(),height=500)
+        components.html(ani2.to_jshtml(),height=800)
