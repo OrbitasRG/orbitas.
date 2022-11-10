@@ -7,3 +7,4 @@ matplotlib==3.5.1
 sympy==1.10
 scipy==1.8.0
 hydralit-components==1.0.9
+plotly==5.11.0
