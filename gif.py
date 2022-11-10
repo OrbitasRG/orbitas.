@@ -12,6 +12,7 @@ import matplotlib.animation as animation
 from matplotlib.patches import Circle
 from streamlit_option_menu import option_menu
 import streamlit.components.v1 as components 
+import plotly.tools
 
 
 st.set_page_config(
