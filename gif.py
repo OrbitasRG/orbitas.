@@ -228,6 +228,7 @@ if choose == "Órbita de corpos celestes":
             plt.axis([x0-100,x0+100,-100,100])    
         else:    
             plt.axis([- (rs_sun / 2.0)*x0 , (rs_sun / 2.0)*x0 , - (rs_sun / 2.0) *x0 , (rs_sun / 2.0) *x0 ])
+        col1, col2 = st.columns([3,1])       
         
 
         # Montagem do gif
@@ -416,6 +417,7 @@ elif choose == "Órbitas de raios de luz":
         circle = Circle((0, 0), rs_sun, color='dimgrey')
         plt.gca().add_patch(circle)
         plt.axis([- 0.8 * (rs_sun / 2.0) / uint , 0.8 * (rs_sun / 2.0) / uint , - 0.8 * (rs_sun / 2.0) / uint , 0.8 * (rs_sun / 2.0) / uint ])
+        col1, col2 = st.columns([3,1])  
 
         # Montagem do gif
 
