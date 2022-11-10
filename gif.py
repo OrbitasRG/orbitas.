@@ -227,8 +227,7 @@ if choose == "Órbita de corpos celestes":
         elif x0>=15:
             plt.axis([x0-100,x0+100,-100,100])    
         else:    
-            plt.axis([- (rs_sun / 2.0)*x0 , (rs_sun / 2.0)*x0 , - (rs_sun / 2.0) *x0 , (rs_sun / 2.0) *x0 ])
-        col1, col2 = st.columns([3,1])       
+            plt.axis([- (rs_sun / 2.0)*x0 , (rs_sun / 2.0)*x0 , - (rs_sun / 2.0) *x0 , (rs_sun / 2.0) *x0 ]       
         
 
         # Montagem do gif
@@ -255,7 +254,7 @@ if choose == "Órbita de corpos celestes":
             #time.sleep(0.01)
         
         ani1 = animation.FuncAnimation(fig, animate, frames=range(0,len(x),skipframes), interval=30, blit = True, repeat = False)
-        components.html(ani1.to_jshtml(), height=800)
+        components.html(ani1.to_jshtml(), figsize=(width,height))
 
         #ani1 = FuncAnimation(fig, animate, frames=range(0,len(x),skipframes), interval=30, blit = True, repeat = False)
         
@@ -435,5 +434,5 @@ elif choose == "Órbitas de raios de luz":
 
         ani2 = animation.FuncAnimation(fig, animate, frames=range(0,len(x),skipframes), interval=10, blit = True, repeat = False)
 
-        components.html(ani2.to_jshtml(),height=800)
+        components.html(ani2.to_jshtml(), figsize=(width,height))
         
