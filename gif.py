@@ -12,6 +12,7 @@ import matplotlib.animation as animation
 from matplotlib.patches import Circle
 from streamlit_option_menu import option_menu
 import streamlit.components.v1 as components 
+import plotly.tools
 
 
 st.set_page_config(
@@ -226,8 +227,7 @@ if choose == "Órbita de corpos celestes":
         elif x0>=15:
             plt.axis([x0-100,x0+100,-100,100])    
         else:    
-            plt.axis([- (rs_sun / 2.0)*x0 , (rs_sun / 2.0)*x0 , - (rs_sun / 2.0) *x0 , (rs_sun / 2.0) *x0 ])
-        st.plotly_chart(graph, use_container_width=True)       
+            plt.axis([- (rs_sun / 2.0)*x0 , (rs_sun / 2.0)*x0 , - (rs_sun / 2.0) *x0 , (rs_sun / 2.0) *x0 ])    
         
 
         # Montagem do gif
@@ -255,6 +255,7 @@ if choose == "Órbita de corpos celestes":
         
         ani1 = animation.FuncAnimation(fig, animate, frames=range(0,len(x),skipframes), interval=30, blit = True, repeat = False)
         components.html(ani1.to_jshtml(), height=800)
+        st.plotly_chart(ani, use_container_width=True)  
 
         #ani1 = FuncAnimation(fig, animate, frames=range(0,len(x),skipframes), interval=30, blit = True, repeat = False)
         
@@ -434,4 +435,5 @@ elif choose == "Órbitas de raios de luz":
         ani2 = animation.FuncAnimation(fig, animate, frames=range(0,len(x),skipframes), interval=10, blit = True, repeat = False)
 
         components.html(ani2.to_jshtml(),height=800)
+        st.plotly_chart(ani, use_container_width=True)  
        
