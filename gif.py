@@ -227,6 +227,7 @@ if choose == "Órbita de corpos celestes":
             plt.axis([x0-100,x0+100,-100,100])    
         else:    
             plt.axis([- (rs_sun / 2.0)*x0 , (rs_sun / 2.0)*x0 , - (rs_sun / 2.0) *x0 , (rs_sun / 2.0) *x0 ])
+        st.plotly_chart(fig, use_container_width=True)       
         
 
         # Montagem do gif
