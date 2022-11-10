@@ -12,7 +12,6 @@ import matplotlib.animation as animation
 from matplotlib.patches import Circle
 from streamlit_option_menu import option_menu
 import streamlit.components.v1 as components 
-import plotly.tools
 
 
 st.set_page_config(
@@ -227,7 +226,7 @@ if choose == "Órbita de corpos celestes":
         elif x0>=15:
             plt.axis([x0-100,x0+100,-100,100])    
         else:    
-            plt.axis([- (rs_sun / 2.0)*x0 , (rs_sun / 2.0)*x0 , - (rs_sun / 2.0) *x0 , (rs_sun / 2.0) *x0 ]       
+            plt.axis([- (rs_sun / 2.0)*x0 , (rs_sun / 2.0)*x0 , - (rs_sun / 2.0) *x0 , (rs_sun / 2.0) *x0 ])
         
 
         # Montagem do gif
@@ -415,7 +414,7 @@ elif choose == "Órbitas de raios de luz":
         ax.set_facecolor("black")
         circle = Circle((0, 0), rs_sun, color='dimgrey')
         plt.gca().add_patch(circle)
-        plt.axis([- 0.8 * (rs_sun / 2.0) / uint , 0.8 * (rs_sun / 2.0) / uint , - 0.8 * (rs_sun / 2.0) / uint , 0.8 * (rs_sun / 2.0) / uint ]) 
+        plt.axis([- 0.8 * (rs_sun / 2.0) / uint , 0.8 * (rs_sun / 2.0) / uint , - 0.8 * (rs_sun / 2.0) / uint , 0.8 * (rs_sun / 2.0) / uint ])
 
         # Montagem do gif
 
@@ -433,5 +432,5 @@ elif choose == "Órbitas de raios de luz":
 
         ani2 = animation.FuncAnimation(fig, animate, frames=range(0,len(x),skipframes), interval=10, blit = True, repeat = False)
 
-        components.html(ani2.to_jshtml(), height=800)
-        
+        components.html(ani2.to_jshtml(),height=800)
+       
